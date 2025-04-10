@@ -1,0 +1,110 @@
+
+body {
+    font-family: Arial;
+    background: #e5f6e5;
+    text-align: center;
+}
+
+#recursos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-weight: bold;
+}
+
+#registro-eventos {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #f4f4f4;
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#registro-eventos h3 {
+    margin-top: 0;
+}
+
+#eventos-lista {
+    list-style: none;
+    padding-left: 0;
+}
+
+#eventos-lista li {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+#tablero {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-template-rows: repeat(5, 60px);
+    gap: 4px;
+    justify-content: center;
+    margin: 20px;
+}
+
+.celda {
+    width: 60px;
+    height: 60px;
+    background-color: #8fc1a9;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.celda.conquistada {
+    border: 3px solid green;
+    background-color: #d4ffd4;
+    cursor: default;
+}
+
+.celda.enemiga {
+    border: 3px solid red;
+    background-color: #ffd4d4;
+    cursor: not-allowed;
+}
+
+/* Modal */
+#modal-final {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal-contenido {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 15px #000;
+    max-width: 300px;
+    width: 80%;
+}
+
+#modal-final.oculto {
+    display: none;
+}
+
+.modal-contenido button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    background-color: #3cba54;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}

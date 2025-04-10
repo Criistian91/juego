@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>EcoNations</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>EcoNations: Guerra por el Futuro</h1>
+    <div id="recursos">
+        <p>💧 Agua: <span id="agua">0</span></p>
+        <p>🌾 Comida: <span id="comida">0</span></p>
+        <p>⚡ Energía: <span id="energia">0</span></p>
+    </div>    
+    <div id="tablero"></div>
+    <button id="turnoBtn">Siguiente Turno</button>
+    <div id="registro-eventos">
+        <h3>📜 Registro de eventos</h3>
+        <ul id="eventos-lista"></ul>
+    </div>
+    
+    <div id="modal-final" class="oculto">
+        <div class="modal-contenido">
+            <h2 id="modal-titulo"></h2>
+            <p id="modal-mensaje"></p>
+            <button onclick="reiniciarJuego()">🔁 Volver a jugar</button>
+        </div>
+    </div>    
+
+    <script src="juego.js"></script>
+</body>
+</html>
